@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LeerDirectorio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="480,1662" sap2010:WorkflowViewState.IdRef="LeerDirectorio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LeerDirectorio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="518,1598" sap2010:WorkflowViewState.IdRef="LeerDirectorio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="21">
+    <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -22,10 +22,12 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Management.Automation</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -46,17 +48,18 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="440,1582" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="478,1518" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,1458" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,1426" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="LeerDirectorio" sap:VirtualizedContainerService.HintSize="374,1231" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="LeerDirectorio" sap:VirtualizedContainerService.HintSize="438,1367" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="carpetaEntrada" />
             <Variable x:TypeArguments="s:String[]" Name="strArchivos" />
@@ -68,7 +71,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign carpeta entrada" sap:VirtualizedContainerService.HintSize="352,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign DisplayName="Assign carpeta entrada" sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[carpetaEntrada]</OutArgument>
             </Assign.To>
@@ -76,7 +79,7 @@
               <InArgument x:TypeArguments="x:String">C:\RPA\hv_entrada\</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Assign carpeta preprocesado" sap:VirtualizedContainerService.HintSize="352,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign DisplayName="Assign carpeta preprocesado" sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[carpetaPreprocesado]</OutArgument>
             </Assign.To>
@@ -84,7 +87,7 @@
               <InArgument x:TypeArguments="x:String">C:\RPA\hv_preprocesado\</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Assign carpeta plano" sap:VirtualizedContainerService.HintSize="352,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign DisplayName="Assign carpeta plano" sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[carpetaPlano]</OutArgument>
             </Assign.To>
@@ -92,7 +95,7 @@
               <InArgument x:TypeArguments="x:String">C:\RPA\hv_plano\</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Assign Lista archivos" sap:VirtualizedContainerService.HintSize="352,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign DisplayName="Assign Lista archivos" sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="s:String[]">[strArchivos]</OutArgument>
             </Assign.To>
@@ -100,23 +103,25 @@
               <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(carpetaEntrada)]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="352,707" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[strArchivos]">
+          <WriteLine DisplayName="Log" sap:VirtualizedContainerService.HintSize="400,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Encontrado &quot;+strArchivos.Count.ToString+&quot; archivos&quot;]" />
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="400,774" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[strArchivos]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="336,573" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="368,741" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="strNombreArchivo" />
                     <Variable x:TypeArguments="x:String" Name="textoArchivo" />
+                    <Variable x:TypeArguments="sco:Collection(sma:PSObject)" Name="salidaDemonio" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[strNombreArchivo]</OutArgument>
                     </Assign.To>
@@ -124,10 +129,12 @@
                       <InArgument x:TypeArguments="x:String">[item.ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Leyendo archivo &quot;+strNombreArchivo]" />
-                  <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[strNombreArchivo]" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[textoArchivo]" />
-                  <ui:WriteTextFile DisplayName="Creo archivo plano del texto leido" FileName="[strNombreArchivo.Replace(carpetaEntrada, carpetaPlano).Replace(&quot;pdf&quot;, &quot;txt&quot;)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[textoArchivo]" />
-                  <ui:MoveFile ContinueOnError="{x:Null}" Destination="[strNombreArchivo.Replace(carpetaEntrada, carpetaPreprocesado)]" DisplayName="Mover pdf a preprocesados" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[strNombreArchivo]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="330,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Leyendo archivo &quot;+strNombreArchivo]" />
+                  <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[strNombreArchivo]" sap:VirtualizedContainerService.HintSize="330,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[textoArchivo]" />
+                  <ui:WriteTextFile DisplayName="Creo archivo plano del texto leido" FileName="[strNombreArchivo.Replace(carpetaEntrada, carpetaPlano).Replace(&quot;pdf&quot;, &quot;txt&quot;)]" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[textoArchivo]" />
+                  <ui:MoveFile ContinueOnError="{x:Null}" Destination="[strNombreArchivo.Replace(carpetaEntrada, carpetaPreprocesado)]" DisplayName="Mover pdf a preprocesados" sap:VirtualizedContainerService.HintSize="330,22" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[strNombreArchivo]" />
+                  <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="C:\RPA\hv_bin\Run.bat" DisplayName="Invoke Power Shell - TXT to CSV" sap:VirtualizedContainerService.HintSize="330,59" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1" Output="[salidaDemonio]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="330,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;CSV estado: &quot;+salidaDemonio.ToString]" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>
