@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>480,931</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>512,907</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -55,15 +55,15 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="440,851" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="472,787" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,727" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,695" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="LecturaDeCorreo - Corporativo" sap:VirtualizedContainerService.HintSize="264,500" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="LecturaDeCorreo - Corporativo" sap:VirtualizedContainerService.HintSize="296,468" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="pass" />
             <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="list" />
@@ -74,7 +74,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign carpeta entrada" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign DisplayName="Assign carpeta entrada" sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[carpetaEntrada]</OutArgument>
             </Assign.To>
@@ -82,10 +82,10 @@
               <InArgument x:TypeArguments="x:String">C:\RPA\hv_entrada\</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="242,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADGGR5GXpREKwCUIDaT2wDAAAAAACAAAAAAAQZgAAAAEAACAAAAAAKyw2j4fp54QYuhGzt7faXy6xoMWGw0Ckd1zBaPfTigAAAAAOgAAAAAIAACAAAAChfj9lIWWBuhxZoUW2kIrI0ljvw1VVkCYKoIChsDSc3BAAAADnayPHzLYYtrNzQl9AL1xaQAAAAOhJK8cbWUMMcgf/YAz4v41tkeCyYlDEVivEm2p24BMrGDFoyv0YSoqrJ5gd6rEZHaxtSb3zAwZzGe+DWxMUkbg=" Result="[pass]" />
-          <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="juliandresog.pruebas@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="242,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Convocatoria" MarkAsRead="True" Messages="[list]" OnlyUnreadMessages="True" Password="[pass]" Port="993" SecureConnection="SslOnConnect" Server="imap.gmail.com" Top="1" />
-          <WriteLine DisplayName="Log" sap:VirtualizedContainerService.HintSize="242,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Encontrado &quot;+list.Count.ToString+&quot; correos&quot;]" />
-          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each - Procesar contenido correos" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list]">
+          <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="258,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADGGR5GXpREKwCUIDaT2wDAAAAAACAAAAAAAQZgAAAAEAACAAAAAAKyw2j4fp54QYuhGzt7faXy6xoMWGw0Ckd1zBaPfTigAAAAAOgAAAAAIAACAAAAChfj9lIWWBuhxZoUW2kIrI0ljvw1VVkCYKoIChsDSc3BAAAADnayPHzLYYtrNzQl9AL1xaQAAAAOhJK8cbWUMMcgf/YAz4v41tkeCyYlDEVivEm2p24BMrGDFoyv0YSoqrJ5gd6rEZHaxtSb3zAwZzGe+DWxMUkbg=" Result="[pass]" />
+          <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="juliandresog.pruebas@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="258,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Convocatoria" MarkAsRead="True" Messages="[list]" OnlyUnreadMessages="True" Password="[pass]" Port="993" SecureConnection="SslOnConnect" Server="imap.gmail.com" Top="4" />
+          <WriteLine DisplayName="Log" sap:VirtualizedContainerService.HintSize="258,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Encontrado &quot;+list.Count.ToString+&quot; correos&quot;]" />
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each - Procesar contenido correos" sap:VirtualizedContainerService.HintSize="258,51" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="snm:MailMessage">
                 <ActivityAction.Argument>
